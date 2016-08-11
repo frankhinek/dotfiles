@@ -3,14 +3,22 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
+## Approach
+
+Initially I planned to include the installation of Homebrew, zsh, Atom, and
+other applications along with configuration related dotfiles.  I took a queue
+from Caarlos0's [machine](https://github.com/caarlos0/machine) project and
+decided to copy the pattern of keeping [software installation](https://github.com/frankhinek/mac-setup) and
+[configuration](https://github.com/frankhinek/dotfiles) in separate repositories.
+
 ## Compatibility
 
-These scripts and dotfiles have only been tested on Mac OS X El Capitan.
+These scripts and dotfiles have only been tested on macOS X El Capitan.
 
 ## Roadmap
 
-- [ ] Install ZSH
-- [ ] Install Docker for Mac
+- [ ] Create bootstrap script
+- [ ] Configure git
 
 ## Thanks
 
