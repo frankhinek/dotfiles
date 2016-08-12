@@ -17,7 +17,9 @@ These scripts and dotfiles have only been tested on macOS X El Capitan.
 
 ## Roadmap
 
-- [ ] Create bootstrap script
+- [x] Create bootstrap script
+- [ ] Configure atom
+- [ ] Configure zsh
 - [ ] Configure git
 
 ## Thanks

@@ -1,0 +1,3 @@
+#!/bin/zsh
+# shortcut to this dotfiles path is $DOTFILES_ROOT
+export DOTFILES_ROOT="$HOME/.dotfiles"
