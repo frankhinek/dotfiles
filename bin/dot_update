@@ -25,8 +25,8 @@ git pull --rebase --stat updates "$(git rev-parse --abbrev-ref HEAD)"
 #git submodule update --init --recursive --remote --merge --quiet
 
 # Run all installs
-echo "› $DOTFILES_ROOT/scripts/install.sh"
-"$DOTFILES_ROOT/scripts/install.sh"
+echo "› $DOTFILES_ROOT/scripts/installer.sh"
+"$DOTFILES_ROOT/scripts/installer.sh"
 
 ## NOT CURRENTLY BEING USED ####################################################
 #if [ -n "$ZSH_VERSION" ]; then
