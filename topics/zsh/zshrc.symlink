@@ -1,5 +1,6 @@
 #!/bin/zsh
-# shortcut to this dotfiles path is $DOTFILES_ROOT
+
+# Shortcut to the dotfiles path is $DOTFILES_ROOT
 export DOTFILES_ROOT="$HOME/.dotfiles"
 
 # Directory for storing development projects that can be `c [tab]` to
@@ -7,3 +8,41 @@ export PROJECTS="$HOME/Code"
 
 # Default editor
 export EDITOR='atom'
+
+# Store all of our .zsh files as parameters
+typeset -U config_files
+config_files=($DOTFILES_ROOT/*/*.zsh)
+
+# Iterate through the list of files load only those named path.zsh
+# `source` takes as argument a script which is then executed in the environment
+# of the current session - i.e. you will retain all changes the script does to
+# the environment, which is not the case when just executing the script.
+for file in ${(M)config_files:#*/path.zsh}; do
+  source "$file"
+done
+
+## NOT CURRENTLY BEING USED ####################################################
+# Load antibody plugins
+# source ~/.bundles.txt
+
+# Load everything but the path and completion files
+for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
+  source "$file"
+done
+
+## NOT CURRENTLY BEING USED ####################################################
+# Can't enable this until antibody installation and configuration is done
+# autoload -Uz compinit && compinit -C
+
+## NOT CURRENTLY BEING USED ####################################################
+# Can't enable this until antibody installation and configuration is done
+# Load every completion after autocomplete loads
+# for file in ${(M)config_files:#*/completion.zsh}; do
+#   source "$file"
+# done
+
+# Unsets the parameter since we no longer need it
+unset config_files
+
+# Use .localrc for SECRETS that you don't want in your public, versioned repo.
+[[ -a ~/.localrc ]] && source ~/.localrc

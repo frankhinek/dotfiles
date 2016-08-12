@@ -32,9 +32,9 @@ The project is organized as follows:
 ## Roadmap
 
 - [x] Create bootstrap script
+- [ ] Configure zsh
 - [ ] Configure git
 - [ ] Configure atom
-- [ ] Configure zsh
 
 ## Thanks
 
