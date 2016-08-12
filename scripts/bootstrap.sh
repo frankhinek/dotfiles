@@ -94,7 +94,7 @@ link_file() {
 #                                                                              #
 # Symlinks any *.symlink files in the dotfiles repository to ~/                #
 ################################################################################
-install_dotfiles () {
+symlink_dotfiles () {
   info 'Installing dotfiles'
   find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
     while read -r src; do
@@ -121,8 +121,8 @@ echo ''
 # Execute the setup_gitconfig() function
 setup_gitconfig
 
-# Execute the install_dotfiles() function
-install_dotfiles
+# Execute the symlink_dotfiles() function
+symlink_dotfiles
 
 # Print success message to user
 echo '\n  dotfiles bootstrap completed successfully!'
