@@ -96,7 +96,7 @@ link_file() {
 ################################################################################
 symlink_dotfiles () {
   info 'Installing dotfiles'
-  find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
+  find -H "$DOTFILES_TOPICS" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
     while read -r src; do
       dst="$HOME/.$(basename "${src%.*}")"
       link_file "$src" "$dst"
@@ -110,7 +110,7 @@ symlink_dotfiles () {
 # Determine the path of the .dotfiles directory.
 # Typically this will be /Users/<username>/.dotfiles/
 cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
+DOTFILES_TOPICS="$(pwd -P)/topics"
 
 # Exit immediately if a command exits with a non-zero status
 set -e

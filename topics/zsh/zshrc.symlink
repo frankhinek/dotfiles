@@ -1,0 +1,9 @@
+#!/bin/zsh
+# shortcut to this dotfiles path is $DOTFILES_ROOT
+export DOTFILES_ROOT="$HOME/.dotfiles"
+
+# Directory for storing development projects that can be `c [tab]` to
+export PROJECTS="$HOME/Code"
+
+# Default editor
+export EDITOR='atom'
