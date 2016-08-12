@@ -1,0 +1,47 @@
+#!/bin/zsh
+#
+# dot_update
+#
+# `dot_update` handles installation of dependencies and updating of associated
+# packages.  It should be run periodically to make sure you're on the latest and
+# greatest.
+export DOTFILES_ROOT="$HOME/.dotfiles"
+cd "$DOTFILES_ROOT" || exit 1
+
+# fixes PATH (we could be running from the crontab)
+PATH="$(command -p getconf PATH):/usr/local/bin"
+
+# SSH would not work under cron, so adding repository using https
+echo "› setting up update channel"
+git remote add updates https://github.com/frankhinek/dotfiles.git 2> /dev/null
+
+# Update repo
+echo "› git update"
+git pull --rebase --stat updates "$(git rev-parse --abbrev-ref HEAD)"
+
+## NOT CURRENTLY BEING USED ####################################################
+# Update submodules
+#echo "› submodules update"
+#git submodule update --init --recursive --remote --merge --quiet
+
+# Run all installs
+echo "› $DOTFILES_ROOT/scripts/install"
+"$DOTFILES_ROOT/scripts/install"
+
+## NOT CURRENTLY BEING USED ####################################################
+#if [ -n "$ZSH_VERSION" ]; then
+#  echo "› antibody update"
+#  antibody update
+#fi
+
+## NOT CURRENTLY BEING USED ####################################################
+#echo "› updating completion cache"
+#rm -f ~/.zcompdump
+#autoload -Uz compinit && compinit
+
+echo "› registering last update"
+git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
+
+## NOT CURRENTLY BEING USED ####################################################
+#echo "› update crontab config"
+#"$DOTFILES_ROOT/script/setup_autoupdate"

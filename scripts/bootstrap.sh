@@ -124,5 +124,15 @@ setup_gitconfig
 # Execute the symlink_dotfiles() function
 symlink_dotfiles
 
+# Run the dot_update script which handles installation of dependencies,
+# pulling latest dotfiles updates from GitHub, and setting up a crontab to run
+# updates automatically on a schedule.
+info "Installing dependencies"
+if ./bin/dot_update; then
+  success "Completed installing dependencies"
+else
+  fail "Error: Failed to install dependencies"
+fi
+
 # Print success message to user
 echo '\n  dotfiles bootstrap completed successfully!'

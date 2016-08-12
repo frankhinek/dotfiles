@@ -31,7 +31,7 @@ Thanks to all that shared their work!
 
 * [caarlos0/dotfiles](https://github.com/caarlos0/dotfiles)
 
-## References
+## Additional References
 
 There are sure to be thousands of different collections of dotfiles but here are
 a few I came across.  I did not reuse any code from these, but they may be
