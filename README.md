@@ -32,8 +32,8 @@ The project is organized as follows:
 ## Roadmap
 
 - [x] Create bootstrap script
-- [ ] Configure zsh
-- [ ] Configure antibody
+- [x] Configure zsh
+- [x] Configure antibody
 - [ ] Configure git
 - [ ] Configure atom
 
