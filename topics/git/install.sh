@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Don't ask ssh password all the time
 git config --global user.helper osxkeychain

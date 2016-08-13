@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/bin/zsh
 cd "$PROJECTS/$1"
