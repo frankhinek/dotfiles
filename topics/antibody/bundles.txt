@@ -1,0 +1,5 @@
+# note this is alphabetically sorted
+caarlos0/ports
+caarlos0/zsh-mkc
+Tarrasch/zsh-bd
+zsh-users/zsh-completions
