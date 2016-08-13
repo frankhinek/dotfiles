@@ -34,7 +34,7 @@ The project is organized as follows:
 - [x] Create bootstrap script
 - [x] Configure zsh
 - [x] Configure antibody
-- [ ] Configure git
+- [x] Configure git
 - [ ] Configure atom
 
 ## Thanks
