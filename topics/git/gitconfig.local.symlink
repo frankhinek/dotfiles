@@ -37,4 +37,4 @@
 [submodule]
 	fetchJobs = 4
 [commit]
-	template = ~/.dotfiles/git/template.txt
+	template = ~/.dotfiles/topics/git/template.txt
