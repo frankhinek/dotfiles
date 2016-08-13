@@ -28,16 +28,16 @@ git pull --rebase --stat updates "$(git rev-parse --abbrev-ref HEAD)"
 echo "› $DOTFILES_ROOT/scripts/installer.sh"
 "$DOTFILES_ROOT/scripts/installer.sh"
 
-## NOT CURRENTLY BEING USED ####################################################
-#if [ -n "$ZSH_VERSION" ]; then
-#  echo "› antibody update"
-#  antibody update
-#fi
+# Update antibody
+if [ -n "$ZSH_VERSION" ]; then
+ echo "› antibody update"
+ antibody update
+fi
 
-## NOT CURRENTLY BEING USED ####################################################
-#echo "› updating completion cache"
-#rm -f ~/.zcompdump
-#autoload -Uz compinit && compinit
+# Update completion cache
+echo "› updating completion cache"
+rm -f ~/.zcompdump
+autoload -Uz compinit && compinit
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
