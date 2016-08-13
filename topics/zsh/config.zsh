@@ -55,7 +55,7 @@ fi
 
 ## NOT CURRENTLY BEING USED ####################################################
 # # Use emacs key bindings
-bindkey -e
+# bindkey -e
 #
 # # [Ctrl-r] - Search backward incrementally for a specified string.
 # # The string may begin with ^ to anchor the search to the beginning of the line.

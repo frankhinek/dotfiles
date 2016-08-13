@@ -21,25 +21,21 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
-## NOT CURRENTLY BEING USED ####################################################
 # Load antibody plugins
-# source ~/.bundles.txt
+source ~/.bundles.txt
 
 # Load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
   source "$file"
 done
 
-## NOT CURRENTLY BEING USED ####################################################
-# Can't enable this until antibody installation and configuration is done
-# autoload -Uz compinit && compinit -C
+# Load completions
+autoload -Uz compinit && compinit -C
 
-## NOT CURRENTLY BEING USED ####################################################
-# Can't enable this until antibody installation and configuration is done
 # Load every completion after autocomplete loads
-# for file in ${(M)config_files:#*/completion.zsh}; do
-#   source "$file"
-# done
+for file in ${(M)config_files:#*/completion.zsh}; do
+  source "$file"
+done
 
 # Unsets the parameter since we no longer need it
 unset config_files
