@@ -35,6 +35,7 @@ The project is organized as follows:
 - [x] Configure zsh
 - [x] Configure antibody
 - [x] Configure git
+- [x] Configure iTerm2
 - [ ] Configure atom
 
 ## Thanks
