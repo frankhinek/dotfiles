@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 #!/bin/sh
-if which npm >/dev/null 2>&1; then
+if (command -v nvm) >/dev/null 2>&1; then
 
   _nvm_git_upgrade() {
     # Upgrade NVM by changing to the $NVM_DIR, pulling down the latest changes,
@@ -19,11 +19,10 @@ if which npm >/dev/null 2>&1; then
       command docker "$@"
     fi
   }
-
-  alias npis='npm install --save'
-  alias npisd='npm install --save-dev'
-  alias npig='npm install -g'
-  alias npit='npm init'
-  alias npi='npm install'
-
 fi
+
+alias npis='npm install --save'
+alias npisd='npm install --save-dev'
+alias npig='npm install -g'
+alias npit='npm init'
+alias npi='npm install'
