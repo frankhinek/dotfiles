@@ -1,8 +1,7 @@
 #!/bin/zsh
 
-#if (command -v nvm) >/dev/null 2>&1; then
-
-  _nvm_git_upgrade() {
+if command -v nvm >/dev/null 2>&1; then
+  nvm_upgrade() {
     # Upgrade NVM by changing to the $NVM_DIR, pulling down the latest changes,
     # checking out the latest version, and activating the new version
     ( cd "$NVM_DIR"
@@ -10,15 +9,7 @@
       git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`
     ) && . "$NVM_DIR/nvm.sh"
   }
-
-  nvm() {
-    if [ "$1" = "upgrade" ]; then
-      _nvm_git_upgrade
-    else
-      command nvm "$@"
-    fi
-  }
-#fi
+fi
 
 alias npis='npm install --save'
 alias npisd='npm install --save-dev'
