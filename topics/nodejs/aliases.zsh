@@ -3,7 +3,7 @@
 #!/bin/sh
 if which npm >/dev/null 2>&1; then
 
-  dcleanup() {
+  _nvm_git_upgrade() {
     # Upgrade NVM by changing to the $NVM_DIR, pulling down the latest changes,
     # checking out the latest version, and activating the new version
     ( cd "$NVM_DIR"
@@ -12,9 +12,9 @@ if which npm >/dev/null 2>&1; then
     ) && . "$NVM_DIR/nvm.sh"
   }
 
-  npm() {
-    if [ "$1" = "__cleanup" ]; then
-      dcleanup
+  nvm() {
+    if [ "$1" = "upgrade" ]; then
+      _nvm_git_upgrade
     else
       command docker "$@"
     fi
@@ -25,5 +25,5 @@ if which npm >/dev/null 2>&1; then
   alias npig='npm install -g'
   alias npit='npm init'
   alias npi='npm install'
-  
+
 fi
