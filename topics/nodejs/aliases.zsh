@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if (command -v nvm) >/dev/null 2>&1; then
+#if (command -v nvm) >/dev/null 2>&1; then
 
   _nvm_git_upgrade() {
     # Upgrade NVM by changing to the $NVM_DIR, pulling down the latest changes,
@@ -18,7 +18,7 @@ if (command -v nvm) >/dev/null 2>&1; then
       command docker "$@"
     fi
   }
-fi
+#fi
 
 alias npis='npm install --save'
 alias npisd='npm install --save-dev'
