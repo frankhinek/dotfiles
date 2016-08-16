@@ -11,11 +11,11 @@
     ) && . "$NVM_DIR/nvm.sh"
   }
 
-  nvm2() {
+  nvm() {
     if [ "$1" = "upgrade" ]; then
       _nvm_git_upgrade
     else
-      command docker "$@"
+      command nvm "$@"
     fi
   }
 #fi
