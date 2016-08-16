@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-#!/bin/sh
 if (command -v nvm) >/dev/null 2>&1; then
 
   _nvm_git_upgrade() {
@@ -12,7 +11,7 @@ if (command -v nvm) >/dev/null 2>&1; then
     ) && . "$NVM_DIR/nvm.sh"
   }
 
-  nvm() {
+  nvm2() {
     if [ "$1" = "upgrade" ]; then
       _nvm_git_upgrade
     else
