@@ -1,2 +1,2 @@
 #!/bin/zsh
-export PATH="$PATH:$DOTFILES_ROOT/bin"
+export PATH="/usr/local/bin:$PATH:$DOTFILES_ROOT/bin"
