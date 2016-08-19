@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Don't ask ssh password all the time
-git config --global user.helper osxkeychain
+git config --global credential.helper osxkeychain
 
 # Better diffs
 if which diff-so-fancy > /dev/null 2>&1; then
