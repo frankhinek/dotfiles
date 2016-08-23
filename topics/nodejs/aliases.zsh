@@ -14,3 +14,5 @@ alias npisd='npm install --save-dev'
 alias npig='npm install -g'
 alias npit='npm init'
 alias npi='npm install'
+alias nplg="npm list -g --depth=0 2>/dev/null"
+alias npl="npm list --depth=0 2>/dev/null"
