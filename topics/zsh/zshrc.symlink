@@ -47,4 +47,4 @@ done
 unset config_files updated_at
 
 # Use .localrc for SECRETS that you don't want in your public, versioned repo.
-[[ -a ~/.localrc ]] && source ~/.localrc
+[ -f ~/.localrc ] && . ~/.localrc
