@@ -11,6 +11,9 @@ cd "$DOTFILES_ROOT" || exit 1
 # fixes PATH (we could be running from the crontab)
 PATH="$(command -p getconf PATH):/usr/local/bin"
 
+# load custom config if any
+[ -f ~/.localrc ] && . ~/.localrc
+
 # SSH would not work under cron, so adding repository using https
 echo "› setting up update channel"
 git remote add updates https://github.com/frankhinek/dotfiles.git 2> /dev/null
@@ -29,9 +32,9 @@ echo "› $DOTFILES_ROOT/scripts/installer.sh"
 "$DOTFILES_ROOT/scripts/installer.sh"
 
 # Update antibody
-if [ -n "$ZSH_VERSION" ]; then
- echo "› antibody update"
- antibody update
+if which antibody >/dev/null 2>&1; then
+  echo "› antibody update"
+  antibody update
 fi
 
 echo "› registering last update"
