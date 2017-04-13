@@ -36,7 +36,7 @@ The project is organized as follows:
 - [x] Configure antibody
 - [x] Configure git
 - [x] Configure iTerm2
-- [ ] Configure atom
+- [x] Configure atom
 - [x] Configure Node.js
 
 ## Thanks
