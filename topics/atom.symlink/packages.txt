@@ -23,4 +23,3 @@ linter-eslint@8.1.5
 linter-terraform-syntax@1.1.2
 linter-ui-default@1.2.2
 pigments@0.39.1
-react@0.16.2

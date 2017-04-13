@@ -1,8 +1,39 @@
 "*":
+  "asciidoc-preview":
+    compatMode: true
+    exportAsPdf:
+      enabled: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "bd676bf6-1c4a-4b44-b916-83fcd3cba7f2"
+  "atom-material-ui":
+    colors:
+      abaseColor: "#2196f3"
+      predefinedColor: "Blue"
+    fonts: {}
+    tabs: {}
+    treeView: {}
+    ui:
+      panelContrast: true
   core:
+    allowPendingPaneItems: false
     telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    invisibles: {}
+    tabType: "soft"
   "exception-reporting":
-    userId: "dc312902-2793-5da9-45dc-725dd2082ce8"
+    userId: "db5d2332-acd3-b4a2-3970-535b5b1f683d"
+  linter: {}
+  "linter-eslint":
+    useGlobalEslint: true
+  metrics:
+    userId: "b5afb463ba7ccd268a7fb0753c63840b897c66f0"
+  "release-notes":
+    viewedVersion: "0.95.0"
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
