@@ -31,7 +31,7 @@ if test "$(which apm)"; then
   "
 
   for package in $apm_packages; do
-    apm list | grep "$package" > /dev/null 2>&1 || apm install "$package""
+    apm list | grep "$package" > /dev/null 2>&1 || apm install "$package"
   done
 
   apm_packages="
