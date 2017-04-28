@@ -7,5 +7,5 @@ if which brew >/dev/null 2>&1; then
   fi
 fi
 
-antibody bundle < "$DOTFILES/topics/antibody/bundles.txt" > ~/.zsh_plugins.sh
+antibody bundle < "$DOTFILES_ROOT/topics/antibody/bundles.txt" > ~/.zsh_plugins.sh
 antibody update
