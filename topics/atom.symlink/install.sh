@@ -31,7 +31,7 @@ if test "$(which apm)"; then
   "
 
   for package in $apm_packages; do
-    apm list | grep "$module" > /dev/null 2>&1 || apm install "$module"
+    apm list | grep "$package" > /dev/null 2>&1 || apm install "$package""
   done
 
   apm_packages="
@@ -39,6 +39,6 @@ if test "$(which apm)"; then
     exception-reporting
   "
   for package in $apm_packages; do
-    apm list | grep "$module" > /dev/null 2>&1 || apm remove "$module"
+    apm list | grep "$package" > /dev/null 2>&1 || apm remove "$package"
   done
 fi
