@@ -4,11 +4,11 @@ if test "$(which apm)"; then
 
   apm install --packages-file ~/.dotfiles/topics/atom.symlink/packages.txt || true
 
-  modules="
+  apm_packages="
     metrics
     exception-reporting
   "
-  for module in $modules; do
-    apm remove "$module" || true
+  for package in $apm_packages; do
+    apm remove "$package" || true
   done
 fi
