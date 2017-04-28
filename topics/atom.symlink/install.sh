@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/sh
 if test "$(which apm)"; then
-  apm upgrade --confirm false
+  #apm upgrade --confirm false
 
   apm_packages="
     Sublime-Style-Column-Selection
@@ -31,7 +31,9 @@ if test "$(which apm)"; then
   "
 
   for package in $apm_packages; do
-    apm list | grep "$package" > /dev/null 2>&1 || apm install "$package"
+    if [[ ! -d "$HOME/.atom/packages/$package" ]]; then
+      apm install "$package"
+    fi
   done
 
   apm_packages="
@@ -39,6 +41,8 @@ if test "$(which apm)"; then
     exception-reporting
   "
   for package in $apm_packages; do
-    apm list | grep "$package" > /dev/null 2>&1 || apm remove "$package"
+    if [[ -d "$HOME/.atom/packages/$package" ]]; then
+      apm remove "$package"
+    fi
   done
 fi
