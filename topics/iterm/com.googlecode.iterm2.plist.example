@@ -925,7 +925,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/fhinek</string>
+			<string>/Users/frank</string>
 		</dict>
 	</array>
 	<key>NoSyncInstallationId</key>
@@ -970,7 +970,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/fhinek/Downloads/iterm</string>
+	<string>/Users/frank/Downloads/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
