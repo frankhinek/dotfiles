@@ -30,6 +30,7 @@
   linter: {}
   "linter-eslint":
     useGlobalEslint: true
+  "linter-ui-default": {}
   metrics:
     userId: "b5afb463ba7ccd268a7fb0753c63840b897c66f0"
   "release-notes":
