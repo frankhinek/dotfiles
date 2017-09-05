@@ -36,7 +36,10 @@
 	default = simple
 [submodule]
 	fetchJobs = 4
+[user]
+	signingkey = 94BE8F295A99120F
 [commit]
+	cleanup = strip
 	gpgsign = true
 	template = ~/.dotfiles/topics/git/template.txt
 [gpg]
