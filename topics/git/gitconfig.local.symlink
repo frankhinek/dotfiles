@@ -37,4 +37,7 @@
 [submodule]
 	fetchJobs = 4
 [commit]
+	gpgsign = true
 	template = ~/.dotfiles/topics/git/template.txt
+[gpg]
+	program = /usr/local/bin/gpg
