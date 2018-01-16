@@ -3,7 +3,6 @@ if test "$(which apm)"; then
   #apm upgrade --confirm false
 
   apm_packages="
-    Sublime-Style-Column-Selection
     advanced-open-file
     asciidoc-image-helper
     asciidoc-preview
@@ -28,6 +27,7 @@ if test "$(which apm)"; then
     linter-terraform-syntax
     linter-ui-default
     pigments
+    sublime-style-column-selection
   "
 
   for package in $apm_packages; do
