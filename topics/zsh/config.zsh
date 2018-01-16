@@ -40,17 +40,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 # dont ask for confirmation in rm globs*
 setopt RM_STAR_SILENT
 
-if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
-  function zle-line-init() {
-    echoti smkx
-  }
-  function zle-line-finish() {
-    echoti rmkx
-  }
-  zle -N zle-line-init
-  zle -N zle-line-finish
-fi
-
 ## NOT CURRENTLY BEING USED ####################################################
 # # Use emacs key bindings
 # bindkey -e
@@ -66,14 +55,52 @@ fi
 # if [[ ! -z "$terminfo[knp]" ]]; then
 #   bindkey "$terminfo[knp]" down-line-or-history
 # fi
+
+# [Ctrl-P] - Up a line of history
+bindkey '^P' up-line-or-history
+
+# [Ctrl-N] - Down a line of history
+bindkey '^N' up-line-or-history
+
 # start typing + [Up-Arrow] - fuzzy find history forward
-if [[ ! -z "$terminfo[kcuu1]" ]]; then
-  bindkey "$terminfo[kcuu1]" history-substring-search-up
-fi
+bindkey '^[[A' history-substring-search-up
+
 # start typing + [Down-Arrow] - fuzzy find history backward
-if [[ ! -z "$terminfo[kcud1]" ]]; then
-  bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[B' history-substring-search-down
+
+# [Alt-RightArrow] - move forward one word
+bindkey '^[^[[D' backward-word
+
+# [Alt-RightArrow] - move forward one word
+bindkey '^[^[[C' forward-word
+
+# [Ctrl-A] - Go to beginning of line
+bindkey '^A' beginning-of-line
+
+# [Home] - Go to beginning of line
+if [[ ! -z "$terminfo[khome]" ]]; then
+  bindkey "$terminfo[khome]" beginning-of-line
 fi
+
+# [Ctrl-E] - Go to end of line
+bindkey '^E' end-of-line
+
+# [End] - Go to end of line
+if [[ ! -z "$terminfo[kend]" ]]; then
+  bindkey "$terminfo[kend]"  end-of-line
+fi
+
+# [fn-Delete] - delete forward
+bindkey '^[[3~' delete-char
+
+# [Backspace] - delete backward
+bindkey '^?' backward-delete-char
+
+# # [Shift-Tab] - move through the completion menu backwards
+if [[ ! -z "$terminfo[kcbt]" ]]; then
+  bindkey "$terminfo[kcbt]" reverse-menu-complete
+fi
+
 # if [[ ! -z "$terminfo[khome]" ]]; then
 #   # [Home] - Go to beginning of line
 #   bindkey "$terminfo[khome]" beginning-of-line

@@ -7,16 +7,14 @@ export DOTFILES_ROOT="$HOME/.dotfiles"
 export PROJECTS="$HOME/Code"
 
 # Default editor
-export EDITOR='atom'
+export EDITOR='vim'
+export VEDITOR='code'
 
 # Store all of our .zsh files as parameters
 typeset -U config_files
 config_files=($DOTFILES_ROOT/topics/*/*.zsh)
 
-# Iterate through the list of files load only those named path.zsh
-# `source` takes as argument a script which is then executed in the environment
-# of the current session - i.e. you will retain all changes the script does to
-# the environment, which is not the case when just executing the script.
+# load the path files
 for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
@@ -33,9 +31,9 @@ done
 autoload -Uz compinit
 typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
 if [ $(date +'%j') != $updated_at ]; then
-  compinit
+  compinit -i
 else
-  compinit -C
+  compinit -C -i
 fi
 
 # Load every completion after autocomplete loads
