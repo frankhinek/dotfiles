@@ -47,6 +47,7 @@
     "workbench.editor.showIcons": true,
     "go.testOnSave": false,
     "go.coverOnSave": false,
+    "workbench.panel.location": "bottom",
     "explorer.confirmDragAndDrop": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Atom One Dark"

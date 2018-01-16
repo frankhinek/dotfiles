@@ -15,8 +15,9 @@ if test "$(which code)"; then
 CoenraadS.bracket-pair-colorizer
 EditorConfig.EditorConfig
 HookyQR.beautify
+PKief.material-icon-theme
+akamud.vscode-theme-onedark
 PeterJausovec.vscode-docker
-arcticicestudio.nord-visual-studio-code
 be5invis.toml
 caarlos0.language-prometheus
 esbenp.prettier-vscode
