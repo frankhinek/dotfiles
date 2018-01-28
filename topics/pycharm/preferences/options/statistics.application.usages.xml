@@ -1,0 +1,14 @@
+<application>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="StripeButton[Docker].hidden" count="1" />
+      <entry feature="StripeButton[Version Control].shown" count="1" />
+      <entry feature="ideaapp.started" count="1" />
+      <entry feature="terminal.mac" count="2" />
+      <entry feature="welcome.screen.WelcomScreen.ManageLicense" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenDirectoryProject" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+    </counts>
+  </component>
+</application>

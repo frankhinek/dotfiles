@@ -1,0 +1,43 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/Code/cs6601-assignment-2" />
+        <option value="$USER_HOME$/Code/mac-setup" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/Code/cs6601-assignment-2" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/Code/cs6601-assignment-2" />
+    <option name="pid" value="" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Code/cs6601-assignment-2">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-173.4301.16" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1517178533410" />
+              <option name="buildTimestamp" value="1515665424908" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Code/mac-setup">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-173.4301.16" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1517178426959" />
+              <option name="buildTimestamp" value="1515665424908" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
