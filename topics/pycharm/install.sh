@@ -1,4 +1,9 @@
 #!/bin/sh
+success () {
+  # shellcheck disable=SC2059
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
 ################################################################################
 # FUNCTION DEFINITION                                                          #
 #                                                                              #
@@ -31,5 +36,9 @@ if test "$(which charm)"; then
 		# Symlink both directories, backing up existing dirs if they exist
 		link_file "$DOTFILES_ROOT/topics/pycharm/catalog" "$PYCHARM_CATALOG"
 		link_file "$DOTFILES_ROOT/topics/pycharm/preferences" "$PYCHARM_PREFERENCES"
+
+		# Install the PyCharm options.xml and jdk.table.xml examples
+		cat "$DOTFILES_ROOT"/topics/pycharm/preferences/options/jdk.table.xml.example > "$DOTFILES_ROOT"/topics/pycharm/preferences/options/jdk.table.xml
+		cat "$DOTFILES_ROOT"/topics/pycharm/preferences/options/options.xml.example > "$DOTFILES_ROOT"/topics/pycharm/preferences/options/options.xml
 	fi
 fi

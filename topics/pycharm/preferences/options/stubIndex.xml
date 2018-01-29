@@ -2,6 +2,13 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
+        <option value="bash.var" />
+        <option value="bash.vardef" />
+        <option value="bash.scriptCommandReference" />
+        <option value="bash.includers" />
+        <option value="bash.included" />
+        <option value="bash.script.name" />
+        <option value="bash.function.name" />
         <option value="puppet.node" />
         <option value="puppet.function" />
         <option value="puppet.resource.by.type" />
